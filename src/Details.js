@@ -25,6 +25,9 @@ class Details extends React.Component {
   }
 
   render () {
+    if(this.state.loading) {
+      return <h1>loading</h1>
+    }
     return (
       <h1>hello</h1>
     )
