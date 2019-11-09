@@ -25,11 +25,19 @@ class Details extends React.Component {
   }
 
   render () {
-    if(this.state.loading) {
-      return <h1>loading</h1>
-    }
+    if (this.state.loading) return <h1>loading</h1>;
+
+    const {animal, breed, location, description, name} = this.state;
+
     return (
-      <h1>hello</h1>
+      <div className="details">
+        <div>
+          <h1>{name}</h1>
+          <h2>{`${animal} - ${breed} - ${location} `}</h2>
+          <button>Adopt {name}</button>
+          <p>{description}</p>
+        </div>
+      </div>
     )
   }
 }
